@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notes App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- Header -->
+    <h1 class="app-title">📝 My Notes</h1>
+
+    <!-- Input Section -->
+    <div class="note-input">
+      <input type="text" placeholder="Note Title..." id="title">
+      <textarea placeholder="Write your note here..." id="description"></textarea>
+      <button id="addBtn">Add Note</button>
+    </div>
+
+    <!-- Notes Container -->
+    <div class="notes-container" id="notesContainer">
+
+      <!-- Example Note Card (JS se baad me auto banega) -->
+      <div class="note-card">
+        <h3>Sample Note</h3>
+        <p>This is how your note will look.</p>
+        <div class="btn-box">
+          <button class="btn">Edit</button>
+        <button class="btn del">Delete</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+<script src="script.js"></script>
+</body>
+</html>

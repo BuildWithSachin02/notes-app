@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.app {
+  width: 100%;
+  max-width: 900px;
+}
+
+/* Title */
+.app-title {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+/* Input Section */
+.note-input {
+  background: #fff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+}
+
+.note-input input,
+.note-input textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 12px 14px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  background: #f1f1f1;
+}
+
+.note-input textarea {
+  resize: none;
+  height: 100px;
+}
+
+.note-input button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  background: #667eea;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.note-input button:hover {
+  background: #5a67d8;
+}
+
+/* Notes Grid */
+.notes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Note Card */
+.note-card {
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s;
+}
+
+.note-card:hover {
+  transform: translateY(-6px);
+}
+
+.note-card h3 {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.note-card p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+/* ============================= */
+/* NOTE CARD SCROLL FIX */
+/* ============================= */
+
+.note-card {
+  max-height: 220px;          /* Card ki fixed height */
+  overflow: hidden;           /* Bahar ka content hide */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Title fix */
+.note-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  white-space: nowrap;        /* Title ek line me rahe */
+  overflow: hidden;
+  text-overflow: ellipsis;    /* ... aa jaye agar bada ho */
+}
+
+/* Description scroll inside card */
+.note-card p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+  overflow-y: auto;           /* 🔥 YAHI MAIN SCROLL */
+  padding-right: 5px;
+  max-height: 100px;
+  overflow-x: hidden;
+}
+
+/* Smooth scrollbar (Chrome, Edge) */
+.note-card p::-webkit-scrollbar {
+  width: 6px;
+}
+
+.note-card p::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 10px;
+}
+
+.note-card p::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.btn-box{
+  display: flex;
+  gap: 10px;
+  margin-top: 17px;
+}
+.btn{
+  padding: 10px 15px 10px 10px;
+  border-radius: 15px;
+  background-color: yellowgreen;
+  border: none;
+  font-weight: 600;
+
+}
+.del{
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border: none;
+  font-weight: 600;
+}
